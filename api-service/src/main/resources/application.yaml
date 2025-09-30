@@ -1,0 +1,24 @@
+server:
+  port: 8079
+
+spring:
+  application:
+    name: api-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5431/order_outbox_db
+    username: order_outbox
+    password: 123
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  temporal:
+    namespace: order-ns
+    connection:
+      target: 127.0.0.1:7233

@@ -1,0 +1,13 @@
+server:
+  port: 8070
+
+spring:
+  application:
+    name: temporal
+
+  temporal:
+    namespace: order-ns
+    connection:
+      target: 127.0.0.1:7233
+    workers-auto-discovery:
+      packages: ru.boraldan.temporal

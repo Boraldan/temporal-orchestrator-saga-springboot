@@ -1,0 +1,9 @@
+
+### Создать ордер
+POST http://localhost:8079/new-order
+Content-Type: application/json
+
+{
+  "customerId": "33333333-3333-3333-3333-333333333331",
+  "amount": 100.01
+}

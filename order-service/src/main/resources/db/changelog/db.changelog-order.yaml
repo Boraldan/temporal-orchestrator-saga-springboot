@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset-order/001-create-order-table.yaml
+#  - include:
+##      file: changes/002-insert-sample-tasks.sql
+#      file: changes-order/002-insert-sample-tasks.yaml
+#      relativeToChangelogFile: true

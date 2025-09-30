@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: changeset-shipping/001-create-shipping-table.yaml
+      relativeToChangelogFile: true
+
