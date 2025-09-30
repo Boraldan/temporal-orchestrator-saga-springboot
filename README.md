@@ -27,3 +27,35 @@
 
 Workflow реализует **Saga** — механизм компенсации действий при сбоях.  
 Если на любом этапе процесса возникает ошибка, выполняются заранее определённые компенсационные действия для отмены уже выполненных шагов, обеспечивая консистентность данных.
+
+## Docker Compose
+
+В данной конфигурации поднимаются следующие контейнеры:
+
+### Temporal Stack
+
+- **temporal**  
+  Сервер Temporal.
+
+- **postgresql (temporal-postgresql)**  
+  База данных PostgreSQL для хранения состояния Temporal.
+
+- **temporal-admin-tools**  
+  CLI-инструменты для администрирования Temporal.
+
+- **temporal-ui**  
+  UI для мониторинга и управления Workflow. Доступен на [http://localhost:8080](http://localhost:8080).
+
+### Базы данных микросервисов
+
+- **postgres-order-outbox**  
+  PostgreSQL для реализации паттерна *Outbox* в сервисе api.
+
+- **postgres-order**  
+  PostgreSQL для **Order Service**.
+
+- **postgres-payment**  
+  PostgreSQL для **Payment Service**.
+
+- **postgres-shipping**  
+  PostgreSQL для **Shipping Service**.  
